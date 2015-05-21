@@ -61,7 +61,7 @@ defined( 'ABSPATH' ) || exit;
 
 	    $screen = get_current_screen();
 
-		if ( $screen->id == 'edit-post_tag'){
+		if ( $screen->id == 'edit-post_tag' && ! current_user_can('update_themes') ) {
 			wp_die( __("You don't have permission to see this page. Please, contact the admin.") );
 		}
 

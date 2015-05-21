@@ -85,6 +85,11 @@ if ( ! class_exists( 'JoaoGrilo_Settings_API_Content' ) ) :
                 array(
                     'id'        => 'joaogrilo_security',
                     'title'     => __( 'WP Security', 'joao-grilo' )
+                ),
+
+                array(
+                    'id'        => 'joaogrilo_comments',
+                    'title'     => __( 'Comments', 'joao-grilo' )
                 )
             );
             return $sections;
@@ -144,7 +149,59 @@ if ( ! class_exists( 'JoaoGrilo_Settings_API_Content' ) ) :
                         'desc'      => __( 'Remove WordPress Version Information', 'joao-grilo' ),
                         'type'      => 'checkbox',
                     )
-				)
+				),
+
+                'joaogrilo_comments' => array(
+
+                    array(
+                        'name'      => 'comments-checkbox-1',
+                        'label'     => __( 'Disable Comments Support', 'joao-grilo' ),
+                        'desc'      => __( 'Disable Support for Comments', 'joao-grilo' ),
+                        'type'      => 'checkbox',
+                    ),
+
+                    array(
+                        'name'      => 'comments-checkbox-2',
+                        'label'     => __( 'Close Comments', 'joao-grilo' ),
+                        'desc'      => __( 'Close Comments on the Front-end', 'joao-grilo' ),
+                        'type'      => 'checkbox',
+                    ),
+
+                    array(
+                        'name'      => 'comments-checkbox-3',
+                        'label'     => __( 'Hide Comments', 'joao-grilo' ),
+                        'desc'      => __( 'Hide existing comments from the Front-end', 'joao-grilo' ),
+                        'type'      => 'checkbox',
+                    ),
+
+                    array(
+                        'name'      => 'comments-checkbox-4',
+                        'label'     => __( 'Remove Comment Menu Item', 'joao-grilo' ),
+                        'desc'      => __( 'Remove comments menu item', 'joao-grilo' ),
+                        'type'      => 'checkbox',
+                    ),
+
+                    array(
+                        'name'      => 'comments-checkbox-5',
+                        'label'     => __( 'Admin Comment Page Redirect', 'joao-grilo' ),
+                        'desc'      => __( 'Redirect any user trying to access comments page on the admin area', 'joao-grilo' ),
+                        'type'      => 'checkbox',
+                    ),
+
+                    array(
+                        'name'      => 'comments-checkbox-6',
+                        'label'     => __( 'Remove Comment Metabox', 'joao-grilo' ),
+                        'desc'      => __( 'Remove comments metabox from dashboard', 'joao-grilo' ),
+                        'type'      => 'checkbox',
+                    ),
+
+                    array(
+                        'name'      => 'comments-checkbox-7',
+                        'label'     => __( 'Remove Comment from Admin Bar', 'joao-grilo' ),
+                        'desc'      => __( 'Remove comments links from admin bar', 'joao-grilo' ),
+                        'type'      => 'checkbox',
+                    )
+                )
             );
 
             return $settings_fields;

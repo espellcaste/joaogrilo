@@ -178,6 +178,7 @@ if ( ! class_exists('JoaoGrilo') ) :
 			// Classes
 			require( $this->plugin_dir . 'classes/core.php' );
 			require( $this->plugin_dir . 'classes/security.php' );
+			require( $this->plugin_dir . 'classes/comment.php' );
 		}
 
 		/**
@@ -191,7 +192,7 @@ if ( ! class_exists('JoaoGrilo') ) :
 		private function setup_hooks() {
 			
 			// Main hooks
-			add_action( 'wp_joao-grilo_loaded',              array( $this, 'load_textdomain'     ), 0 );
+			add_action( 'wp_joao-grilo_loaded', array( $this, 'load_textdomain' ), 0 );
 		}
 
 		/**

@@ -2,7 +2,7 @@
 // Exit if accessed directly
 defined( 'ABSPATH' ) || exit;
 	
-	add_action( 'admin_init', 'security_functions');
+	add_action( 'init', 'security_functions');
 
 	if ( ! function_exists('security_functions') ) :
 		
